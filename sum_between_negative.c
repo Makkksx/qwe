@@ -1,0 +1,12 @@
+#include "sum_between_negative.h"
+#include "math.h"
+#include "index_first_negative.h"
+#include "index_last_negative.h"
+
+int sum_between_negative(int mas[], int ssize)
+{
+    int k=0;
+    for(int i=index_first_negative(mas,ssize); i<index_last_negative(mas,ssize);i++)
+        k+=abs(mas[i]);
+    return k;
+}
