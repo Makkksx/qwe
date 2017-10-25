@@ -1,14 +1,8 @@
 #include "index_last_negative.h"
-
+#include "index_first_negative.h"
 int index_last_negative(int mas[], int ssize)
 {
 	int i;
-    for(i=(ssize-1);i>=0;i--)
-    {
-        if (mas[i]<0)
-        {
-            return i;
-        }
-    }
-    return -1;
+	i = ssize + 1 - index_first_negative(mas, ssize);
+    return i;
 }
