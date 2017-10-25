@@ -5,8 +5,8 @@
 
 int sum_between_negative(int mas[], int ssize)
 {
-    int k=0;
-    for(int i=index_first_negative(mas,ssize); i<index_last_negative(mas,ssize);i++)
+    int i,k=0;
+    for(i=index_first_negative(mas,ssize); i<index_last_negative(mas,ssize);i++)
         k+=abs(mas[i]);
     return k;
 }

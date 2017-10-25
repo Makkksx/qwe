@@ -2,7 +2,8 @@
 
 int index_last_negative(int mas[], int ssize)
 {
-    for(int i=(ssize-1);i>=0;i--)
+	int i;
+    for(i=(ssize-1);i>=0;i--)
     {
         if (mas[i]<0)
         {
