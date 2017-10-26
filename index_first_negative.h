@@ -1,1 +1,2 @@
+#pragma once
 int index_first_negative(int mas[], int ssize);
