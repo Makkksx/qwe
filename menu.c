@@ -12,17 +12,14 @@ int main()
     char t,y;
     int array[100];
     int i=1;
-    scanf("%d%c",&n,&y);
-    scanf("%d",&array[0]);
+    scanf_s("%d%c",&n,&y);
+    scanf_s("%d",&array[0]);
     t = getchar();
     while (t!= '\n')
     {
-        scanf("%d%c",&array[i],&t);
+        scanf_s("%d%c",&array[i],&t);
         i++;
     }
-    int j,sum=0;
-    for (j=0;j<i;j++)
-        sum+=abs(array[j]);
     switch (n)
     {
     case 0:
@@ -35,10 +32,11 @@ int main()
         printf("%d",sum_between_negative(array,i));
         break;
     case 3:
-		printf("%d", sum_before_and_after_negative(array, i, sum));
+		printf("%d", sum_before_and_after_negative(array, i));
         break;
     default:
         printf("Данные некорректны");
     }
+	getch();
     return 0;
 }
