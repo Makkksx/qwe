@@ -1,4 +1,4 @@
-#ifdef  __INDEX_FIRST_NEGATIVE_H__
+#ifndef  __INDEX_FIRST_NEGATIVE_H__
 #define __INDEX_FIRST_NEGATIVE_H__
 
 

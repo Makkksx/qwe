@@ -3,6 +3,7 @@
 #include "index_first_negative.h"
 #include "index_last_negative.h"
 #include "sum_between_negative.h"
+#include "sum_before_and_after_negative.h"
 #include <math.h>
 
 int main()
@@ -11,12 +12,12 @@ int main()
     char t,y;
     int array[100];
     int i=1;
-    scanf_s("%d%c",&n,&y);
-    scanf_s("%d",&array[0]);
+    scanf("%d%c",&n,&y);
+    scanf("%d",&array[0]);
     t = getchar();
     while (t!= '\n')
     {
-        scanf_s("%d%c",&array[i],&t);
+        scanf("%d%c",&array[i],&t);
         i++;
     }
     int j,sum=0;
@@ -39,6 +40,5 @@ int main()
     default:
         printf("Данные некорректны");
     }
-	getch();
     return 0;
 }
