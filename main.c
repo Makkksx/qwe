@@ -10,9 +10,9 @@ int main()
  //  char*begunok=s1;
     while ((c=getchar()) != '!')
     {
-        if (c == '\n')
-            continue;
-        s1[i++]=c;                                      //–í–í–û–î
+      //  if (c == '\n')
+      //      continue;
+        s1[i++]=c;                                      //¬¬Œƒ
         if ((i%50)==0)
         {
             s1=realloc(s1,50*sizeof(char)*(++d)+sizeof(char));
@@ -27,7 +27,7 @@ int main()
    /* fgets(begunok,51,stdin);
     while(strchr(s1,'!') == NULL )
     {
-        s1=realloc(s1,50*sizeof(char)*(++i)+sizeof(char));       //–°–¢–ê–†–´–ô –í–í–û–î
+        s1=realloc(s1,50*sizeof(char)*(++i)+sizeof(char));       //—“¿–€… ¬¬Œƒ
 
 
         begunok=s1+(i-1)*50;
@@ -47,7 +47,7 @@ int main()
         b=t=bil_probel=0;
         while ((s1[i]!=';') && (s1[i]!='.') && (s1[i] != '?') && (s1[i] != '!'))
         {
-            if ((!isspace(s1[i])) || (bil_probel))                              //–£–î–ê–õ–ï–ù–ò–ï –ü–†–û–ë–ï–õ–û–í –í –ù–ê–ß–ê–õ–ï
+            if ((!isspace(s1[i])) || (bil_probel))                              //”ƒ¿À≈Õ»≈ œ–Œ¡≈ÀŒ¬ ¬ Õ¿◊¿À≈
                 {
                     s_new[t++]=s1[i];
                     if (!bil_probel)
@@ -59,9 +59,17 @@ int main()
     s_new[t]='\0';
     for(t = 0; t < strlen(s_new); t++)
         if (isdigit(s_new[t]) && (t!=0))
-            if (!isspace(s_new[t-1]) && !isspace(s_new[t+1]) && !(s_new[t+1]=='!') && !(s_new[t+1]==';') && !(s_new[t+1]=='.') && !(s_new[t+1]=='?'))
+        //    if (isspace(s_new[t-1]) || isspace(s_new[t+1]) )
+            if ( !isdigit(s_new[t-1]) && !isspace(s_new[t-1]) && !isspace(s_new[t+1]) && !(s_new[t+1]=='!') && !(s_new[t+1]==';') && !(s_new[t+1]=='.') && !(s_new[t+1]=='?'))
             {
-                b=1;                   //–ü–†–û–í–ï–†–ö–ê –ù–ê –¶–ò–§–†–£ –í–ù–£–¢–†–ò
+                while(isdigit(s_new[t]))
+                    t++;
+                if (!isspace(s_new[t]) && !(s_new[t]=='!') && !(s_new[t]==';') && !(s_new[t]=='.') && !(s_new[t]=='?'))
+                    {
+                     //   printf("%c\n",s_new[t]);
+                        b=1;
+                        break;
+                    }              //œ–Œ¬≈– ¿ Õ¿ ÷»‘–” ¬Õ”“–»
             }
 
    // printf("%c\n",s1[i-1]);
@@ -73,7 +81,7 @@ int main()
 
     s_new=nachalo;
     }
-    printf("–ö–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–π –¥–æ %d –∏ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ –ø—Ä–µ–¥–ª–æ–∂–µ–Ω–∏–π –ø–æ—Å–ª–µ %d",n-1,m);
+    printf(" ÓÎË˜ÂÒÚ‚Ó ÔÂ‰ÎÓÊÂÌËÈ ‰Ó %d Ë ÍÓÎË˜ÂÒÚ‚Ó ÔÂ‰ÎÓÊÂÌËÈ ÔÓÒÎÂ %d",n-1,m);
     free(s1);
     free(s_new);
     return 0;
