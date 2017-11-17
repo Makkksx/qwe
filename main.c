@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <windows.h>
 int main()
 {
     int i=0;
@@ -13,7 +12,7 @@ int main()
     {
         if (c == '\n')
             continue;
-        s1[i++]=c;                                      //ВВОД
+        s1[i++]=c;                                      //Р’Р’РћР”
         if ((i%50)==0)
         {
             s1=realloc(s1,50*sizeof(char)*(++d)+sizeof(char));
@@ -28,7 +27,7 @@ int main()
    /* fgets(begunok,51,stdin);
     while(strchr(s1,'!') == NULL )
     {
-        s1=realloc(s1,50*sizeof(char)*(++i)+sizeof(char));       //СТАРЫЙ ВВОД
+        s1=realloc(s1,50*sizeof(char)*(++i)+sizeof(char));       //РЎРўРђР Р«Р™ Р’Р’РћР”
 
 
         begunok=s1+(i-1)*50;
@@ -48,7 +47,7 @@ int main()
         b=t=bil_probel=0;
         while ((s1[i]!=';') && (s1[i]!='.') && (s1[i] != '?') && (s1[i] != '!'))
         {
-            if ((!isspace(s1[i])) || (bil_probel))                              //УДАЛЕНИЕ ПРОБЕЛОВ В НАЧАЛЕ
+            if ((!isspace(s1[i])) || (bil_probel))                              //РЈР”РђР›Р•РќРР• РџР РћР‘Р•Р›РћР’ Р’ РќРђР§РђР›Р•
                 {
                     s_new[t++]=s1[i];
                     if (!bil_probel)
@@ -62,7 +61,7 @@ int main()
         if (isdigit(s_new[t]) && (t!=0))
             if (!isspace(s_new[t-1]) && !isspace(s_new[t+1]) && !(s_new[t+1]=='!') && !(s_new[t+1]==';') && !(s_new[t+1]=='.') && !(s_new[t+1]=='?'))
             {
-                b=1;                   //ПРОВЕРКА НА ЦИФРУ ВНУТРИ
+                b=1;                   //РџР РћР’Р•Р РљРђ РќРђ Р¦РР¤Р РЈ Р’РќРЈРўР Р
             }
 
    // printf("%c\n",s1[i-1]);
@@ -74,7 +73,7 @@ int main()
 
     s_new=nachalo;
     }
-    printf("Количество предложений до %d и количество предложений после %d",n-1,m);
+    printf("РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґР»РѕР¶РµРЅРёР№ РґРѕ %d Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґР»РѕР¶РµРЅРёР№ РїРѕСЃР»Рµ %d",n-1,m);
     free(s1);
     free(s_new);
     return 0;
